@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея | Генератор паролей</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1>Галерея материалов</h1>
+            <p>Визуализация компонентов и процессов безопасности</p>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Главная</a></li>
+            <li><a href="gallery.html" class="nav-link active">Галерея</a></li>
+            <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <main class="container main-content">
+        <div class="gallery-controls">
+            <span class="stat">Изображений: <b id="img-count">0</b></span>
+            <span class="stat">Лайков: <b id="total-likes">0</b></span>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="interface">Интерфейс</button>
+                <button class="filter-btn" data-filter="security">Безопасность</button>
+            </div>
+        </div>
+
+        <div class="gallery-grid">
+            <article class="gallery-card" data-category="interface">
+                <img src="images/lock-security.jpg" alt="Замок кибербезопасности">
+                <div class="card-info">
+                    <h3>Базовая защита</h3>
+                    <p>Визуальный символ блокировки доступа к данным.</p>
+                    <button class="like-btn">❤ <span class="count">0</span></button>
+                </div>
+            </article>
+            <article class="gallery-card" data-category="security">
+                <img src="images/encryption-code.jpg" alt="Шифрование кода">
+                <div class="card-info">
+                    <h3>Шифрование</h3>
+                    <p>Алгоритмы преобразования паролей в хеши.</p>
+                    <button class="like-btn">❤ <span class="count">0</span></button>
+                </div>
+            </article>
+            <article class="gallery-card" data-category="security">
+                <img src="images/shield-protection.jpg" alt="Щит защиты данных">
+                <div class="card-info">
+                    <h3>Системная защита</h3>
+                    <p>Использование системного пула энтропии ОС.</p>
+                    <button class="like-btn">❤ <span class="count">0</span></button>
+                </div>
+            </article>
+            <article class="gallery-card" data-category="interface">
+                <img src="images/password-digital.jpg" alt="Цифровой пароль">
+                <div class="card-info">
+                    <h3>Цифровые ключи</h3>
+                    <p>Пример сгенерированных последовательностей.</p>
+                    <button class="like-btn">❤ <span class="count">0</span></button>
+                </div>
+            </article>
+            <article class="gallery-card" data-category="security">
+                <img src="images/cyber-security.jpg" alt="Кибербезопасность">
+                <div class="card-info">
+                    <h3>Анализ угроз</h3>
+                    <p>Мониторинг уязвимостей слабых паролей.</p>
+                    <button class="like-btn">❤ <span class="count">0</span></button>
+                </div>
+            </article>
+            <article class="gallery-card" data-category="interface">
+                <img src="images/binary-code.jpg" alt="Бинарный код">
+                <div class="card-info">
+                    <h3>Машинное представление</h3>
+                    <p>Как браузер обрабатывает символьные наборы.</p>
+                    <button class="like-btn">❤ <span class="count">0</span></button>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Киселев Богдан | Колледж ИТ.Москва</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор паролей | Киселев Богдан</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1>Генератор безопасных паролей</h1>
+            <p>Индивидуальный проект | Колледж ИТ.Москва</p>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <ul class="nav-list">
+            <li><a href="index.html" class="nav-link active">Главная</a></li>
+            <li><a href="gallery.html" class="nav-link">Галерея</a></li>
+            <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <main class="container main-content">
+        <section class="card">
+            <h2>Создание пароля</h2>
+            <div class="output-wrapper">
+                <input type="text" id="password-output" readonly placeholder="Нажмите «Сгенерировать»">
+                <button id="copy-btn" title="Копировать">📋</button>
+            </div>
+            <div class="strength-meter">
+                <div class="strength-bar" id="strength-bar"></div>
+                <span id="strength-text">Надёжность: -</span>
+            </div>
+            <div class="controls">
+                <div class="control-group">
+                    <label for="length-range">Длина: <span id="length-val">12</span></label>
+                    <input type="range" id="length-range" min="6" max="32" value="12">
+                </div>
+                <div class="checkboxes">
+                    <label><input type="checkbox" id="chk-upper" checked> A-Z (Заглавные)</label>
+                    <label><input type="checkbox" id="chk-lower" checked> a-z (Строчные)</label>
+                    <label><input type="checkbox" id="chk-numbers" checked> 0-9 (Цифры)</label>
+                    <label><input type="checkbox" id="chk-symbols" checked> !@#$ (Символы)</label>
+                    <label><input type="checkbox" id="chk-ambiguous"> Исключить 0, O, l, 1</label>
+                </div>
+                <button id="generate-btn" class="primary-btn">Сгенерировать</button>
+            </div>
+            <p class="hint">* Используется crypto.getRandomValues() (Web Crypto API)</p>
+        </section>
+
+        <section class="card">
+            <h2>О проекте</h2>
+            <p><strong>Студент:</strong> Киселев Богдан</p>
+            <p><strong>Группа:</strong> 1ИП-5-25</p>
+            <p><strong>Специальность:</strong> Информационные системы и программирование</p>
+            <p>Проект реализован в ходе выполнения 5 практических работ. Генератор использует криптографически стойкий алгоритм для создания случайных последовательностей. Интерфейс адаптивен и соответствует современным стандартам вёрстки.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Киселев Богдан | Колледж ИТ.Москва</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
